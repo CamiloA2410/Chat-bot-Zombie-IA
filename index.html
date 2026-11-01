@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>El Recluso Zombie</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="juego">
+    <h1>El Recluso Zombie</h1>
+    <p class="meta">Convence al zombie manejado con IA de que te entregue la vacuna. ¡Usa tus palabras!</p>
+
+    <section class="escena">
+      <div id="zombie" class="zombie">🧟</div>
+      <div class="barra"><div id="confianza" class="barra-relleno"></div></div>
+      <p id="estado" class="estado">Confianza: 20 / 100</p>
+    </section>
+
+    <section id="chat" class="chat"></section>
+
+    <form id="formulario" class="formulario" autocomplete="off">
+      <input id="entrada" type="text" placeholder="Escribe tu mensaje al zombie..." maxlength="120" required>
+      <button type="submit">Enviar</button>
+    </form>
+
+    <p id="turnos" class="turnos"></p>
+  </main>
+
+  <script src="cerebro.js"></script>
+  <script src="juego.js"></script>
+  <script src="server.js"></script>
+</body>
+</html>
